@@ -1,23 +1,26 @@
 /* Reusable root stuff */
-
 :root {
   font-size: 16px;
   font-family: 'Open Sans';
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
-
 }
 
 /* basics*/
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 body {
-color: black;
-background-image: url("background.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-background-position: justify;
-margin: 0;
-padding: 0;
-overflow: hidden;
+  color: black;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: justify;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 main {
@@ -34,15 +37,16 @@ main {
 }
 
 /* Get rid of ugly scroll bar*/
-
 /* change width*/
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
+
 /* Change color of the track*/
 body::-webkit-scrollbar-track {
   background: #1e1e24
 }
+
 /* Change color of the thumb that moves along track*/
 body::-webkit-scrollbar-thumb {
   background: #6649b8
@@ -58,19 +62,18 @@ repeat(x, 1fr) is the same as writing
   /* Learned cool new trick repeat(x, 1fr) is the same as writing 1fr x amount of times */
   /*grid-template-columns: repeat(6, 1fr);
   grid-template-columns: repeat(6, minmax(240px, 1fr));*/
-
   margin-top: 5rem;
-  grid-template-columns: repeat(auto-fill, minmax(240px,300px));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 300px));
   grid-auto-rows: 240px;
 }
+
 /* for smaller screens*/
-@media screen and (min-width: 600px) {
-  .card-tall {
-    grid-row: span 1 / auto;
-  }
-  .card-wide {
-    grid-column: span 2 / auto;
-  }
+.card-tall {
+  grid-row: span 1 / auto;
+}
+
+.card-wide {
+  grid-column: span 2 / auto;
 }
 
 /*TEMPORARY PHOTO TEXT*/
@@ -84,7 +87,6 @@ repeat(x, 1fr) is the same as writing
 }
 
 /* Make grids 2 and 3 invisible */
-
 .card-invis {
   display: flex;
   flex-direction: column;
@@ -97,7 +99,6 @@ repeat(x, 1fr) is the same as writing
   border-radius: 4px;
   transition: all 500ms;
   overflow: hidden;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -105,56 +106,58 @@ repeat(x, 1fr) is the same as writing
 
 /* I have no idea how but this is working somehow */
 @media only screen and (max-width: 1026px) {
-    #hid {
-        display: none;
-    }
+  #hid {
+    display: none;
+  }
 }
 
 /* Stuff to make the grid fancy */
 .card-norm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+  height: 25%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-norm:hover {
+  color: rgba(102, 73, 184, 1);
+  transform: translateY(-2px) scale(1);
+}
+
+/* TEXT ANIMATION FOR SG */
+/* Disabled on mobile */
+@media screen and (min-width: 600px) {
+  a {
+    text-decoration: none;
     color: #fff;
-    height: 25%;
-    width: 100%;
-    border-radius: 4px;
-    transition: all 500ms;
-    overflow: hidden;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
- }
-
- .card-norm:hover {
-     color: rgba(102,73,184,1);
-     transform: translateY(-2px) scale(1);
   }
 
-/* TEXT ANIMATION DEMO */
-a {
-  text-decoration: none;
-  color: #fff;
-}
+  a::before {
+    content: '';
+    background-image: url('moother.png');
+    background-position: 0 30%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    height: 75vh;
+    left: 0;
+    position: absolute;
+    bottom: -10vh;
+    width: 50vw;
+    transform: translateY(100%);
+    transition: transform .3s;
+  }
 
-a::before {
-  content: '';
-  background-image: url('moother.png');
-  background-position: 0 30%;
-  background-repeat: no-repeat;
-  background-size: 75%;
-  height: 75vh;
-  left: 0;
-  position: absolute;
-  bottom: -10vh;
-  width: 50vw;
-  transform: translateY(100%);
-  transition: transform .3s;
-}
-
-a:hover::before {
-  transform: translateY(0px);
+  a:hover::before {
+    transform: translateY(0px);
+  }
 }
