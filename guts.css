@@ -87,21 +87,10 @@ repeat(x, 1fr) is the same as writing
 }
 
 /* Make grids 2 and 3 invisible */
-.card-invis {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  color: #fff;
-  height: 25%;
-  width: 100%;
-  border-radius: 4px;
-  transition: all 500ms;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+@media screen and (max-width: 1980px) {
+  .card-invis {
+    display: none;
+  }
 }
 
 /* I have no idea how but this is working somehow */
