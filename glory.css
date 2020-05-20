@@ -1,0 +1,169 @@
+/* Reusable root stuff */
+@font-face {
+    font-family: 'berkahi_blackletterbold';
+    src: url('berkahi_blackletter-webfont.woff2') format('woff2'),
+         url('berkahi_blackletter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+}
+
+/* basics*/
+h1 {
+  font-family: 'berkahi_blackletterbold';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2.5em;
+  color: black;
+}
+
+p {
+  font-family: 'berkahi_blackletterbold';
+  font-weight: Bold;
+  font-style: italic;
+  font-size: 2.75rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+html {
+  background: url("reform.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*removes */
+body {
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: justify;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+main {
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+
+/*NAVBAR PROPETIES*/
+.navbar {
+  width: 100vh;
+  height: 7rem;
+  position: fixed;
+  background-color: var(--bg-primary);
+}
+
+/* Get rid of ugly scroll bar*/
+/* change width*/
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+/* Change color of the track*/
+body::-webkit-scrollbar-track {
+  background: #1e1e24
+}
+
+/* Change color of the thumb that moves along track*/
+body::-webkit-scrollbar-thumb {
+  background: #6649b8
+}
+
+/* Grid stuff */
+/* Learned cool new trick
+repeat(x, 1fr) is the same as writing
+1fr x amount of times */
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+  /* Learned cool new trick repeat(x, 1fr) is the same as writing 1fr x amount of times */
+  /*grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(240px, 1fr));*/
+  margin-top: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 300px));
+  grid-auto-rows: 240px;
+}
+
+/* for smaller screens*/
+.card-tall {
+  grid-row: span 2 / auto;
+}
+
+.card-wide {
+  grid-column: span 4 / auto;
+}
+
+.card-chub {
+  grid-column: span 2 / auto;
+}
+
+
+/*TEMPORARY PHOTO TEXT*/
+.photo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #fff;
+}
+
+/* Make grids 2 and 3 invisible */
+@media screen and (max-width: 1980px) {
+  .card-invis {
+    display: none;
+  }
+
+}
+
+/* I have no idea how but this is working somehow */
+@media screen and (max-width: 1026px) {
+  #hid {
+    display: none;
+  }
+}
+
+/* Stuff to make the grid fancy */
+.card-norm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+  height: 25%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+/* Gives same purple effect to non a-tag cards*/
+.card-norm:hover {
+  color: rgba(102, 73, 184, 1);
+  transform: translateY(-2px) scale(1);
+}
+
+.card-norm a:hover {
+  color: rgba(102, 73, 184, 1);
+  transform: translateY(-2px) scale(1);
+}
