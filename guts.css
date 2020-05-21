@@ -197,7 +197,7 @@ repeat(x, 1fr) is the same as writing
 
 /* TEXT ANIMATION FOR SG */
 /* Disabled on mobile */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1980px) {
 .card-tall a {
     text-decoration: none;
     color: #fff;
