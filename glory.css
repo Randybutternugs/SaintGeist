@@ -21,7 +21,14 @@ h1 {
   font-weight: normal;
   font-style: normal;
   font-size: 2.5em;
-  color: black;
+  color: white;
+  margin: 0;
+}
+
+#purple {
+  color: white;
+  margin: 0;
+  transform: translateY(-290px) scale(1);
 }
 
 p {
@@ -33,7 +40,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: rgba(102, 73, 184, 1);
 }
 
 html {
@@ -135,6 +142,15 @@ repeat(x, 1fr) is the same as writing
 @media screen and (max-width: 1026px) {
   #hid {
     display: none;
+  }
+
+  #purple{
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 }
 
