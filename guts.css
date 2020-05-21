@@ -36,7 +36,15 @@ a {
 
 /* refer to the media if else statements to see how background changes when on mobile*/
 html {
-  background: url("reform.jpg") no-repeat center center fixed;
+  background: url("dispute.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#contact {
+  background: url("contact.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -140,6 +148,24 @@ repeat(x, 1fr) is the same as writing
 }
 
 /* Stuff to make the grid fancy */
+.card-norm0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+  height: 25%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'berkahi_blackletterbold';
+
+}
 .card-norm {
   display: flex;
   flex-direction: column;
@@ -155,6 +181,7 @@ repeat(x, 1fr) is the same as writing
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
 /* Gives same purple effect to non a-tag cards*/
@@ -195,4 +222,14 @@ repeat(x, 1fr) is the same as writing
     a:hover::before {
       transform: translateY(0px);
     }
+  }
+
+
+  /* Grid stuff for contact page */
+  /* Learned cool new trick
+  repeat(x, 1fr) is the same as writing
+  1fr x amount of times */
+  .contact-grid {
+    text-align: center;
+    margin-top: 25%;
   }
