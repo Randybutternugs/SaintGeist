@@ -1,8 +1,8 @@
 /* Reusable root stuff */
 @font-face {
-    font-family: 'berkahi_blackletterbold';
-    src: url('berkahi_blackletter-webfont.woff2') format('woff2'),
-         url('berkahi_blackletter-webfont.woff') format('woff');
+    font-family: 'dearestregular';
+    src: url('dearest-oopd-webfont.woff2') format('woff2'),
+         url('dearest-oopd-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -17,14 +17,13 @@
 
 /* basics*/
 h1 {
-  font-family: 'berkahi_blackletterbold';
+  font-family: 'dearestregular';
   font-weight: normal;
   font-style: normal;
 }
 
 p {
-  font-family: 'berkahi_blackletterbold';
-  font-weight: Bold;
+  font-family: 'dearestregular';
   font-style: italic;
   font-size: 3rem;
 }
@@ -163,7 +162,7 @@ repeat(x, 1fr) is the same as writing
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: 'berkahi_blackletterbold';
+  font-family: 'dearestregular';
 
 }
 .card-norm {

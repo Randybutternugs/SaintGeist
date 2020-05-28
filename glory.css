@@ -1,8 +1,8 @@
 /* Reusable root stuff */
 @font-face {
-    font-family: 'berkahi_blackletterbold';
-    src: url('berkahi_blackletter-webfont.woff2') format('woff2'),
-         url('berkahi_blackletter-webfont.woff') format('woff');
+    font-family: 'dearestregular';
+    src: url('dearest-oopd-webfont.woff2') format('woff2'),
+         url('dearest-oopd-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -17,7 +17,7 @@
 
 /* basics*/
 h1 {
-  font-family: 'berkahi_blackletterbold';
+  font-family: 'dearestregular';
   font-weight: normal;
   font-style: normal;
   font-size: 2.5em;
@@ -32,7 +32,7 @@ h1 {
 }
 
 p {
-  font-family: 'berkahi_blackletterbold';
+  font-family: 'dearestregular';
   font-weight: Bold;
   font-style: italic;
   font-size: 2.75rem;
