@@ -125,8 +125,12 @@ repeat(x, 1fr) is the same as writing
   color: #fff;
 }
 
-/* Changes background on mobile */
-@media screen and (max-width: 1920px) {
+/* Make grids 2 and 3 invisible */
+@media screen and (max-width: 1980px) {
+  .card-invis {
+    display: none;
+  }
+
   html {
     background: url("background.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -136,7 +140,12 @@ repeat(x, 1fr) is the same as writing
   }
 }
 
-
+/* I have no idea how but this is working somehow */
+@media screen and (max-width: 1026px) {
+  #hid {
+    display: none;
+  }
+}
 
 /* Stuff to make the grid fancy */
 .card-norm0 {
@@ -157,7 +166,6 @@ repeat(x, 1fr) is the same as writing
   font-family: 'berkahi_blackletterbold';
 
 }
-
 .card-norm {
   display: flex;
   flex-direction: column;
@@ -173,7 +181,6 @@ repeat(x, 1fr) is the same as writing
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  float:right;
 
 }
 
