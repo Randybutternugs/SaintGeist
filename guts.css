@@ -134,7 +134,7 @@ repeat(x, 1fr) is the same as writing
 }
 
 /* Make grids 2 and 3 invisible */
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1919px) {
   .card-invis {
     display: none;
   }
