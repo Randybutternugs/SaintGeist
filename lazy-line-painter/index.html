@@ -1,0 +1,66 @@
+ 
+    <!DOCTYPE html>
+      <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+      <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+      <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+      <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Lazy Line Painter</title>
+        <meta name="description" content="A modern JS library for SVG path animation">
+
+        <!-- css  -->
+        <style>
+
+          body, html {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+            #whitetl {
+              width: 70vw;
+              height: 70vh;
+              position: relative;
+              overflow: visible;
+            }
+        </style>
+     
+        <!-- Include lazylinepainter -->
+        <script src="lazy-line-painter-1.9.6.min.js"></script>
+
+        <script type="text/javascript">
+
+          (function(){ 
+
+            document.onreadystatechange = () => {
+
+              if (document.readyState === 'complete') {
+                        
+                /**
+                 * Setup your Lazy Line element.
+                 * see README file for more settings
+                 */
+
+                let el = document.querySelector('#whitetl');
+                let myAnimation = new LazyLinePainter(el, {"ease":"easeOutCirc","strokeWidth":5.2,"strokeOpacity":1,"strokeCap":"round","delay":1000}); 
+                myAnimation.paint(); 
+              }
+            }
+
+          })();
+
+        </script>
+      </head>
+
+      <body>
+        <svg width="778" height="787" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden" data-llp-composed="true" id="whitetl" class="lazy-line-painter"><defs><clipPath id="clip0"><path d="M94-12 872-12 872 775 94 775Z" fill-rule="evenodd" clip-rule="evenodd" data-llp-id="whitetl-0" data-llp-duration="2500" data-llp-delay="0" fill-opacity="0" style="stroke-linecap: round;" data-llp-stroke-cap="round"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-94 12)"><text fill="#FFFFFF" font-family="Engravers MT,Engravers MT_MSFontService,sans-serif" font-weight="500" font-stretch="expanded" font-size="173" transform="translate(386.907 208)">G<tspan x="19" y="320">s</tspan><tspan x="15.3333" y="112">e</tspan><tspan x="10.8334" y="421">t</tspan><tspan x="228.767" y="221">t</tspan><tspan x="-188.356" y="221">s</tspan><tspan x="-87.1388" y="221">a</tspan><tspan x="39.8819" y="221">I</tspan><tspan x="116.028" y="221">n</tspan></text><path d="M163 360C163 184.926 304.926 43 480 43 655.074 43 797 184.926 797 360 797 535.074 655.074 677 480 677 304.926 677 163 535.074 163 360Z" stroke-miterlimit="8" fill="none" fill-rule="evenodd" data-llp-id="whitetl-1" data-llp-duration="2500" data-llp-delay="2500" fill-opacity="0" style="stroke-linecap: round;" data-llp-stroke-cap="round"/><path d="M154 360C154 179.955 299.955 34 480 34 660.045 34 806 179.955 806 360 806 540.045 660.045 686 480 686 299.955 686 154 540.045 154 360Z" stroke-miterlimit="8" fill="none" fill-rule="evenodd" data-llp-id="whitetl-2" data-llp-duration="2500" data-llp-delay="5000" fill-opacity="0" style="stroke-linecap: round;" data-llp-stroke-cap="round"/></g></svg>
+      </body>
+    </html>
