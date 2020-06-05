@@ -160,6 +160,54 @@ repeat(x, 1fr) is the same as writing
     display: none;
   }
 }
+/*Media Query for 1440 laptops*/
+@media screen and (width: 1440px) {
+  .basic-grid {
+    display: grid;
+    gap: none;
+    /* Learned cool new trick repeat(x, 1fr) is the same as writing 1fr x amount of times */
+    /*grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(240px, 1fr));*/
+    margin-top: 5rem;
+    grid-template-columns: repeat(5, minmax(auto, 360px));
+    grid-auto-rows: 320px;
+  }
+
+}
+
+
+/*Media Query for 4k screens*/
+@media screen and (min-width: 2560px) {
+
+  .basic-grid {
+    display: grid;
+    gap: none;
+    /* Learned cool new trick repeat(x, 1fr) is the same as writing 1fr x amount of times */
+    /*grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(240px, 1fr));*/
+    margin-top: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
+    grid-auto-rows: 320px;
+  }
+
+}
+
+
+/* Special Query for Mobile Phones */
+@media screen and (max-width: 1025px) {
+
+  .basic-grid {
+    display: grid;
+    gap: none;
+    /* Learned cool new trick repeat(x, 1fr) is the same as writing 1fr x amount of times */
+    /*grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(240px, 1fr));*/
+    margin-top: 5rem;
+    grid-template-columns: repeat(5, minmax(auto, 240px));
+    grid-auto-rows: 320px;
+  }
+
+}
 
 /* Stuff to make the grid fancy */
 .card-norm0 {
