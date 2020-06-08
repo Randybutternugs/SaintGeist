@@ -43,6 +43,15 @@ html {
   background-color: black;
 }
 
+/* COUNTDOWN TIMER STUFF */
+#demo {
+  color: #6649b8;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+/* COUNTDOWN TIMER STUFF */
 
 
 #contact {
