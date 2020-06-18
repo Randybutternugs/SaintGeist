@@ -7,6 +7,22 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'dearest_openregular';
+    src: url('dearestopen-4ryp-webfont.woff2') format('woff2'),
+         url('dearestopen-4ryp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'dearest_outlineregular';
+    src: url('dearestoutline-0k19-webfont.woff2') format('woff2'),
+         url('dearestoutline-0k19-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 :root {
   font-size: 16px;
