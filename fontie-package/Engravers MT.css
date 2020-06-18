@@ -6,6 +6,8 @@
 	src: url('Engravers MT.eot?#iefix') format('embedded-opentype'),
 		url('Engravers MT.woff2') format('woff2'),
 		url('Engravers MT.woff') format('woff'),
+		url('Engravers MT.ttf') format('truetype'),
+		url('Engravers MT.otf') format('opentype'),
 		url('Engravers MT.svg#Engravers MT') format('svg');
     font-weight: 500;
     font-style: normal;
