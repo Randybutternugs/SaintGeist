@@ -78,10 +78,6 @@ a {
   align-items: center;
 }
 
-.cross {
-
-}
-
 .loader.hidden {
   animation: fadeOut 4s;
   animation-fill-mode: forwards;
@@ -176,6 +172,128 @@ body::-webkit-scrollbar-track {
 /* Change color of the thumb that moves along track*/
 body::-webkit-scrollbar-thumb {
   background: #6649b8
+}
+
+/* Grid stuff */
+/* Social Bar */
+/*
+To anyone reading this rn:
+I know, this solution is fucking disgusting but I can't bear this any longer.
+I just need a fucking footer and CSS grid is like trying to milk an insect...
+Enjoy the redundant classes n shit.
+Love,
+Adonis
+*/
+.socialbar {
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  display: grid;
+  gap: none;
+  height: 100%;
+  /* Learned cool new trick repeat(x, 1fr) is the same as writing 1fr x amount of times */
+  /*grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(240px, 1fr));*/
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, auto);
+  margin-top: 1rem;
+  grid-auto-rows: 4rem;
+  z-index: 98;
+}
+
+.card1 {
+  grid-column-start: 12;
+  grid-row-start: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'dearestregular';
+}
+
+.card2 {
+  grid-column-start: 11;
+  grid-row-start: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'dearestregular';
+}
+
+.card3 {
+  grid-column-start: 10;
+  grid-row-start: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'dearestregular';
+}
+
+.card4 {
+  grid-column-start: 9;
+  grid-row-start: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'dearestregular';
+}
+
+/* Gives same purple effect to non a-tag cards for the social bar*/
+/* Didn't know you could just use commas for this shit*/
+
+.card4:hover, .card3:hover, .card2:hover, .card1:hover {
+  color: rgba(102, 73, 184, 1);
+  transform: translateY(-2px) scale(1);
+}
+
+.card4 a:hover, .card3 a:hover, .card2 a:hover, .card1 a:hover {
+  color: rgba(102, 73, 184, 1);
+  transform: translateY(-2px) scale(1);
 }
 
 /* Grid stuff */
