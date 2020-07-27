@@ -187,7 +187,7 @@ Adonis
 .socialbar {
   left: 0;
   bottom: 0;
-  height: 100px;
+  height: auto;
   width: 100%;
   position: absolute;
   display: grid;
@@ -282,6 +282,51 @@ Adonis
   font-family: 'dearestregular';
 }
 
+.card5 {
+  padding-left: .5vw;
+  grid-column-start: 2;
+  grid-row-start: 5;
+  grid-column: span 5 / auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'dearestregular';
+}
+
+.card6 {
+  padding-left: .5vw;
+  grid-column-start: 1;
+  grid-row-start: 6;
+  grid-column: span 5 / auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'dearestregular';
+}
+
+
 /* Gives same purple effect to non a-tag cards for the social bar*/
 /* Didn't know you could just use commas for this shit*/
 
@@ -335,6 +380,22 @@ repeat(x, 1fr) is the same as writing
   color: #fff;
 }
 
+/*Media Query for 4k screens*/
+@media screen and (min-width: 2560px) {
+
+  .basic-grid {
+    display: grid;
+    gap: none;
+    /* Learned cool new trick repeat(x, 1fr) is the same as writing 1fr x amount of times */
+    /*grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(240px, 1fr));*/
+    margin-top: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
+    grid-auto-rows: 320px;
+  }
+
+}
+
 /* Make grids 2 and 3 invisible */
 @media screen and (max-width: 1919px) {
   .card-invis {
@@ -356,12 +417,6 @@ repeat(x, 1fr) is the same as writing
   }
 }
 
-/* I have no idea how but this is working somehow */
-@media screen and (max-width: 1225px) {
-  #hid {
-    display: none;
-  }
-}
 /*Media Query for 1440 laptops*/
 @media screen and (width: 1440px) {
   .basic-grid {
@@ -377,26 +432,60 @@ repeat(x, 1fr) is the same as writing
 
 }
 
-
-/*Media Query for 4k screens*/
-@media screen and (min-width: 2560px) {
-
-  .basic-grid {
-    display: grid;
-    gap: none;
-    /* Learned cool new trick repeat(x, 1fr) is the same as writing 1fr x amount of times */
-    /*grid-template-columns: repeat(6, 1fr);
-    grid-template-columns: repeat(6, minmax(240px, 1fr));*/
-    margin-top: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
-    grid-auto-rows: 320px;
+/* I have no idea how but this is working somehow */
+@media screen and (max-width: 1225px) {
+  #hid {
+    display: none;
   }
-
 }
 
 
 /* Special Query for Mobile Phones */
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1024px) {
+
+  .card5 {
+    padding-left: .5vw;
+    grid-column-start: 2;
+    grid-row-start: 5;
+    grid-column: span 6 / auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'dearestregular';
+  }
+  
+  .card6 {
+    padding-left: .5vw;
+    grid-column-start: 1;
+    grid-row-start: 6;
+    grid-column: span 6 / auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'dearestregular';
+  }
 
   .basic-grid {
     display: grid;
@@ -410,6 +499,7 @@ repeat(x, 1fr) is the same as writing
   }
 
 }
+
 
 /* Stuff to make the grid fancy */
 .card-norm0 {
@@ -481,6 +571,7 @@ repeat(x, 1fr) is the same as writing
       width: 50vw;
       transform: translateY(100%);
       transition: transform .3s;
+      z-index: 200;
     }
 
     a:hover::before {

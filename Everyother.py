@@ -17,6 +17,8 @@ print(final.format(len(meme), meme))
 
 
 ##########################===--NEW AND IMPROVED--===#########################################
+import numpy as np
+import pandas as pd
 #improvements
 #(start,stop,step)
 inp = int(input("last question? "))
