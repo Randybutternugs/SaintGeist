@@ -1,7 +1,9 @@
 import numpy as np
 import pandas as pd
-
-#Put the number here and suck mah balls later LOLLL
+#Dont tell anyone but this file has nothing to do with this repo
+#I used to accidentally do every odd on my calc HW so this "tool" (baby toddler tier counter thing)
+# helped me keep track of exacly what problems to do.
+#Put the number here
 meme = np.arange(89)
 meme = meme.tolist()
 
